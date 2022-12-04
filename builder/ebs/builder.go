@@ -173,12 +173,10 @@ func (b *Builder) Prepare(raws ...interface{}) ([]string, []string, error) {
 }
 
 func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook) (packersdk.Artifact, error) {
-
 	session, err := b.config.Session()
 	if err != nil {
 		return nil, err
 	}
-
 	ec2conn := ec2.New(session)
 	iam := iam.New(session)
 	// Setup the state bag and initial state for the steps
@@ -339,6 +337,8 @@ func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook)
 			LocalPortNumber:  b.config.SessionManagerPort,
 			RemotePortNumber: b.config.Comm.Port(),
 			SSMAgentEnabled:  b.config.SSMAgentEnabled(),
+			SSHUsername:      b.config.Comm.SSHUsername,
+			Comm:             &b.config.RunConfig.Comm,
 		},
 		&communicator.StepConnect{
 			Config: &b.config.RunConfig.Comm,

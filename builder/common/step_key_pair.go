@@ -38,7 +38,6 @@ func (s *StepKeyPair) Run(ctx context.Context, state multistep.StateBag) multist
 			state.Put("error", err)
 			return multistep.ActionHalt
 		}
-
 		s.Comm.SSHPrivateKey = privateKeyBytes
 
 		return multistep.ActionContinue
@@ -90,7 +89,6 @@ func (s *StepKeyPair) Run(ctx context.Context, state multistep.StateBag) multist
 		keyResp, err = ec2conn.CreateKeyPair(keypair)
 		return err
 	})
-
 	if err != nil {
 		state.Put("error", fmt.Errorf("Error creating temporary keypair: %s", err))
 		return multistep.ActionHalt
