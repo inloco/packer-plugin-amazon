@@ -87,22 +87,24 @@ func (s *StepCreateSSMTunnel) Run(ctx context.Context, state multistep.StateBag)
 	}()
 
 	if len(s.Comm.SSHPrivateKey) > 0 {
-		ui.Say("Uploading public key to instance")
-		err := s.sendUserSSHPublicKey(instance, s.Comm.SSHPrivateKey)
+		ui.Say("Sending SSH Public Key to EC2 Instance Connect...")
+		err := s.sendSSHPublicKey(instance, s.Comm.SSHPrivateKey)
 		if err != nil {
+			err := fmt.Errorf("error sending SSH Public Key to EC2 Instance Connect")
 			ui.Error(err.Error())
+			state.Put("error", err)
 			return multistep.ActionHalt
 		}
-		ui.Say(fmt.Sprintf("Uploaded public key to instance"))
+		ui.Say(fmt.Sprintf("Sent SSH Public Key to EC2 Instance Connect"))
 	}
 
 	return multistep.ActionContinue
 }
 
-func (s *StepCreateSSMTunnel) sendUserSSHPublicKey(instance *ec2.Instance, privateKey []byte) error {
+func (s *StepCreateSSMTunnel) sendSSHPublicKey(instance *ec2.Instance, privateKey []byte) error {
 	publicKeyBytes, err := sshkey.PublicKeyFromPrivate(privateKey)
 	if err != nil {
-		return fmt.Errorf("Error getting public key from private key: %s", err)
+		return err
 	}
 	svc := ec2instanceconnect.New(s.AWSSession)
 	input := &ec2instanceconnect.SendSSHPublicKeyInput{
@@ -113,17 +115,12 @@ func (s *StepCreateSSMTunnel) sendUserSSHPublicKey(instance *ec2.Instance, priva
 	}
 	result, err := svc.SendSSHPublicKey(input)
 	if err != nil {
-		err := fmt.Errorf(`
-      error encountered in sending public key to instance.
-      Check the key type and length are valid in AWS API.
-      https://docs.aws.amazon.com/ec2-instance-connect/latest/APIReference/API_SendSSHPublicKey.html`, err)
 		return err
-	} else {
-		if *result.Success {
-			return nil
-		}
 	}
-	return fmt.Errorf("Failed to send public key to instance")
+	if !aws.BoolValue(result.Success) {
+		return fmt.Errorf("request did not succeed")
+	}
+	return nil
 }
 
 // Cleanup terminates an active session on AWS, which in turn terminates the associated tunnel process running on the local machine.
