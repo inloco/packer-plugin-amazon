@@ -1,6 +1,8 @@
 module github.com/hashicorp/packer-plugin-amazon
 
-go 1.19
+go 1.21
+
+toolchain go1.21.10
 
 require (
 	github.com/aws/aws-sdk-go v1.52.0
