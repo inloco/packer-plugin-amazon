@@ -121,4 +121,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/hashicorp/packer-plugin-sdk => github.com/inloco/packer-plugin-sdk v0.5.3-incognia.2
+replace github.com/hashicorp/packer-plugin-sdk => github.com/inloco/packer-plugin-sdk v0.5.3-incognia.3
