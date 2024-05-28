@@ -31,6 +31,8 @@ jobs:
       - run: |
           go mod edit -replace=github.com/zclconf/go-cty=github.com/nywilken/go-cty@v1.13.3
           go mod tidy
+          git add go.mod go.sum
+          git commit -m "Temporary commit for testing"
       - name: Describe plugin
         id: plugin_describe
         run: echo "::set-output name=api_version::$(go run . describe | jq -r '.api_version')"
@@ -44,7 +46,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v2
         with:
           version: latest
-          args: release --rm-dist
+          args: release --clean
         env:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
