@@ -45,18 +45,22 @@ type StateChangeConf struct {
 //
 // HCL2 example:
 // ```hcl
-// aws_polling {
-//	 delay_seconds = 30
-//	 max_attempts = 50
-// }
+//
+//	aws_polling {
+//		 delay_seconds = 30
+//		 max_attempts = 50
+//	}
+//
 // ```
 //
 // JSON example:
 // ```json
-// "aws_polling" : {
-// 	 "delay_seconds": 30,
-// 	 "max_attempts": 50
-// }
+//
+//	"aws_polling" : {
+//		 "delay_seconds": 30,
+//		 "max_attempts": 50
+//	}
+//
 // ```
 type AWSPollingConfig struct {
 	// Specifies the maximum number of attempts the waiter will check for resource state.
