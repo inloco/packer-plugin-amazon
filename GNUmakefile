@@ -4,7 +4,7 @@ BINARY=packer-plugin-${NAME}
 COUNT?=1
 TEST?=$(shell go list ./...)
 # HASHICORP_PACKER_PLUGIN_SDK_VERSION?=$(shell go list -m github.com/hashicorp/packer-plugin-sdk | cut -d " " -f2)
-HASHICORP_PACKER_PLUGIN_SDK_VERSION?="v0.3.2"
+HASHICORP_PACKER_PLUGIN_SDK_VERSION?="v0.4.0"
 
 .PHONY: dev
 
