@@ -3,7 +3,8 @@ BINARY=packer-plugin-${NAME}
 
 COUNT?=1
 TEST?=$(shell go list ./...)
-HASHICORP_PACKER_PLUGIN_SDK_VERSION?=$(shell go list -m github.com/hashicorp/packer-plugin-sdk | cut -d " " -f2)
+# HASHICORP_PACKER_PLUGIN_SDK_VERSION?=$(shell go list -m github.com/hashicorp/packer-plugin-sdk | cut -d " " -f2)
+HASHICORP_PACKER_PLUGIN_SDK_VERSION?="v0.3.2"
 
 .PHONY: dev
 
@@ -18,7 +19,7 @@ test:
 	@go test -race -count $(COUNT) $(TEST) -timeout=3m
 
 install-packer-sdc: ## Install packer sofware development command
-	@go install github.com/hashicorp/packer-plugin-sdk/cmd/packer-sdc@v0.5.3
+	@go install github.com/hashicorp/packer-plugin-sdk/cmd/packer-sdc@${HASHICORP_PACKER_PLUGIN_SDK_VERSION}
 
 ci-release-docs: install-packer-sdc
 	@packer-sdc renderdocs -src docs -partials docs-partials/ -dst docs/
