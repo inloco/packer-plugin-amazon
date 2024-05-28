@@ -32,6 +32,8 @@ jobs:
           go mod edit -replace=github.com/zclconf/go-cty=github.com/nywilken/go-cty@v1.13.3
           go mod tidy
           git add go.mod go.sum
+          git config --global user.email "dummy@example.com"
+          git config --global user.name "Dummy Name"
           git commit -m "Temporary commit for testing"
       - name: Describe plugin
         id: plugin_describe
