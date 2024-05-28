@@ -38,6 +38,8 @@ jobs:
           go-version: ${{ needs.get-go-version.outputs.go-version }}
       - run: |
           echo "Testing with Go ${{ needs.get-go-version.outputs.go-version }}"
+          go mod edit -replace=github.com/zclconf/go-cty=github.com/nywilken/go-cty@v1.13.3
+          go mod tidy
           go test -race -count 1 ./... -timeout=3m
 
 
