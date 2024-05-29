@@ -9,11 +9,11 @@ require (
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/hashicorp/hcl/v2 v2.20.1
-	github.com/hashicorp/packer-plugin-sdk v0.3.2
+	github.com/hashicorp/packer-plugin-sdk v0.5.2
 	github.com/hashicorp/vault/api v1.13.0
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/stretchr/testify v1.9.0
-	github.com/zclconf/go-cty v1.14.4
+	github.com/zclconf/go-cty v1.13.0
 	golang.org/x/crypto v0.22.0
 	golang.org/x/sys v0.19.0
 )
@@ -124,4 +124,4 @@ require (
 
 replace github.com/hashicorp/packer-plugin-sdk => github.com/inloco/packer-plugin-sdk v0.3.3
 
-replace github.com/zclconf/go-cty => github.com/nywilken/go-cty v1.13.3
+replace github.com/zclconf/go-cty => github.com/nywilken/go-cty v1.13.3 // added by packer-sdc fix as noted in github.com/hashicorp/packer-plugin-sdk/issues/187
