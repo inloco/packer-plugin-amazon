@@ -23,10 +23,10 @@ github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuy
 github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
-github.com/antchfx/xmlquery v1.3.5 h1:I7TuBRqsnfFuL11ruavGm911Awx9IqSdiU6W/ztSmVw=
-github.com/antchfx/xmlquery v1.3.5/go.mod h1:64w0Xesg2sTaawIdNqMB+7qaW/bSqkQm+ssPaCMWNnc=
 github.com/antchfx/xpath v1.1.11 h1:WOFtK8TVAjLm3lbgqeP0arlHpvCEeTANeWZ/csPpJkQ=
 github.com/antchfx/xpath v1.1.11/go.mod h1:i54GszH55fYfBmoZXapTHN8T8tkcHfRgLyVwwqzXNcs=
+github.com/antchfx/xquery v0.0.0-20180515051857-ad5b8c7a47b0 h1:JaCC8jz0zdMLk2m+qCCVLLLM/PL93p84w4pK3aJWj60=
+github.com/antchfx/xquery v0.0.0-20180515051857-ad5b8c7a47b0/go.mod h1:LzD22aAzDP8/dyiCKFp31He4m2GPjl0AFyzDtZzUu9M=
 github.com/apparentlymart/go-textseg/v13 v13.0.0 h1:Y+KvPE1NYz0xl601PVImeQfFyEy6iT90AvPUL1NNfNw=
 github.com/apparentlymart/go-textseg/v13 v13.0.0/go.mod h1:ZK2fH7c4NqDTLtiYLvIkEghdlcqw7yxLeM89kiTRPUo=
 github.com/apparentlymart/go-textseg/v15 v15.0.0 h1:uYvfpb3DyLSCGWnctWKGj857c6ew1u1fNQOlOtuGxQY=
@@ -64,8 +64,8 @@ github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dylanmei/iso8601 v0.1.0 h1:812NGQDBcqquTfH5Yeo7lwR0nzx/cKdsmf3qMjPURUI=
 github.com/dylanmei/iso8601 v0.1.0/go.mod h1:w9KhXSgIyROl1DefbMYIE7UVSIvELTbMrCfx+QkYnoQ=
-github.com/dylanmei/winrmtest v0.0.0-20210303004826-fbc9ae56efb6 h1:zWydSUQBJApHwpQ4guHi+mGyQN/8yN6xbKWdDtL3ZNM=
-github.com/dylanmei/winrmtest v0.0.0-20210303004826-fbc9ae56efb6/go.mod h1:6BLLhzn1VEiJ4veuAGhINBTrBlV889Wd+aU4auxKOww=
+github.com/dylanmei/winrmtest v0.0.0-20170819153634-c2fbb09e6c08 h1:0bp6/GrNOrTDtSXe9YYGCwf8jp5Fb/b+4a6MTRm4qzY=
+github.com/dylanmei/winrmtest v0.0.0-20170819153634-c2fbb09e6c08/go.mod h1:VBVDFSBXCIW8JaHQpI8lldSKfYaLMzP9oyq6IJ4fhzY=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
@@ -211,8 +211,8 @@ github.com/hashicorp/vault/api v1.13.0 h1:RTCGpE2Rgkn9jyPcFlc7YmNocomda44k5ck8FK
 github.com/hashicorp/vault/api v1.13.0/go.mod h1:0cb/uZUv1w2cVu9DIvuW1SMlXXC6qtATJt+LXJRx+kg=
 github.com/hashicorp/yamux v0.1.1 h1:yrQxtgseBDrq9Y652vSRDvsKCJKOUD+GzTS4Y0Y8pvE=
 github.com/hashicorp/yamux v0.1.1/go.mod h1:CtWFDAQgb7dxtzFs4tWbplKIe2jSi3+5vKbgIO0SLnQ=
-github.com/inloco/packer-plugin-sdk v0.3.2-incognia.4 h1:2Cb60htWZQzEqHXPghUruCQj4F+O83bHDTC2o2raRqM=
-github.com/inloco/packer-plugin-sdk v0.3.2-incognia.4/go.mod h1:zCAmsnkjDbpa93doBPTXpbooEkne1a14jRT6GxTFjQA=
+github.com/inloco/packer-plugin-sdk v0.3.3 h1:5DiPhqt5jDZNiWbVMBT9Z+wyjZRVNTDsr1QOw7tTAb0=
+github.com/inloco/packer-plugin-sdk v0.3.3/go.mod h1:sUl1hTIXYevSIQeR+ySI0z8S3XhfE3ZsnszWMcvgaxs=
 github.com/jcmturner/aescts/v2 v2.0.0 h1:9YKLH6ey7H4eDBXW8khjYslgyqG2xZikXP0EQFKrle8=
 github.com/jcmturner/aescts/v2 v2.0.0/go.mod h1:AiaICIRyfYg35RUkr8yESTqvSy7csK90qZ5xfvvsoNs=
 github.com/jcmturner/dnsutils/v2 v2.0.0 h1:lltnkeZGL0wILNvrNiVCR6Ro5PGU/SeBvVO/8c/iPbo=
@@ -326,6 +326,8 @@ github.com/prometheus/procfs v0.0.8/go.mod h1:7Qr8sr6344vo1JqZ6HhLceV9o3AJ1Ff+Gx
 github.com/ryanuber/columnize v0.0.0-20160712163229-9b3edd62028f/go.mod h1:sm1tb6uqfes/u+d4ooFouqFdy9/2g9QGwK3SQygK0Ts=
 github.com/ryanuber/go-glob v1.0.0 h1:iQh3xXAumdQ+4Ufa5b25cRpC5TYKlno6hsv6Cb3pkBk=
 github.com/ryanuber/go-glob v1.0.0/go.mod h1:807d1WSdnB0XRJzKNil9Om6lcp/3a0v4qIHxIXzX/Yc=
+github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=
+github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
 github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529 h1:nn5Wsu0esKSJiIVhscUtVbo7ada43DJhG55ua/hjS5I=
 github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529/go.mod h1:DxrIzT+xaE7yg65j358z/aeFdxmN0P9QXhEzd20vsDc=
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
