@@ -35,6 +35,7 @@ jobs:
           git config --global user.email "dummy@example.com"
           git config --global user.name "Dummy Name"
           git commit -m "Temporary commit for testing"
+          git checkout HEAD^
       - name: Describe plugin
         id: plugin_describe
         run: echo "::set-output name=api_version::$(go run . describe | jq -r '.api_version')"
