@@ -59,6 +59,8 @@ This selects the most recent Ubuntu 16.04 HVM EBS AMI from Canonical. Note that 
 
 - `owner_name` (string) - The owner alias.
 
+- `block_device_mappings` ([]awscommon.BlockDevice) - Any block device mapping entries.
+
 - `tags` (map[string]string) - The key/value combination of the tags assigned to the AMI.
 
 <!-- End of code generated from the comments of the DatasourceOutput struct in datasource/ami/data.go; -->
